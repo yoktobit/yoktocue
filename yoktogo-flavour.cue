@@ -1,6 +1,6 @@
 import "github.com/yoktobit/yoktocue/schema"
 
-Flavour: #Flavour & {
+#Flavour & {
     name: "yoktocue"
     package: "github.com/yoktobit/yoktocue"
     excludes: [
