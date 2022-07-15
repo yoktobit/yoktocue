@@ -1,5 +1,3 @@
-import "github.com/yoktobit/yoktocue/schema"
-
 #Flavour & {
     name: "yoktocue"
     package: "github.com/yoktobit/yoktocue"
