@@ -8,7 +8,6 @@ schema.#Flavour & {
         "cue.sums",
         "go.mod",
         "go.sum",
-        "yoktogo-flavour.cue",
         "cue.mod"
     ]
 }
