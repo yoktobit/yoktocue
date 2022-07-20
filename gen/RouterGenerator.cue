@@ -3,6 +3,7 @@ package gen
 import "github.com/hofstadter-io/hof/schema/gen"
 
 import "github.com/yoktobit/yoktocue/schema"
+import "strings"
 
 #RouterGenerator: gen.#Generator & {
 	Outdir: "./"
@@ -19,8 +20,9 @@ import "github.com/yoktobit/yoktocue/schema"
 					PackageName: "routes"
 				}
 			}
+            _lowerName: strings.ToLower(R.Name)
 			TemplatePath: "router/handle_route.go"
-			Filepath:     "router/\(R.Name).go"
+			Filepath:     "router/handle_\(_lowerName).go"
 		},
 
 	]
