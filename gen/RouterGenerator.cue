@@ -19,7 +19,7 @@ import "github.com/yoktobit/yoktocue/schema"
 					PackageName: "routes"
 				}
 			}
-			TemplatePath: "router/route.go"
+			TemplatePath: "router/handle_route.go"
 			Filepath:     "router/\(R.Name).go"
 		},
 
