@@ -16,7 +16,7 @@ package schema
     ...
 }
 
-#Route: Name: =~"^[A-Za-z0-9]$"
+#Route: Name: =~"^[A-Za-z][A-Za-z0-9_]*$"
 
 #Method: string
 #Method: "get" | "post" | "put" | "delete"
