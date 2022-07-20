@@ -6,7 +6,7 @@ import "github.com/yoktobit/yoktocue/schema"
 
 #RouterGenerator: gen.#Generator & {
 	Outdir: "./"
-	Routes: [...schema.#Route]
+	Routes: schema.#Routes
 	Out: [{
 		TemplatePath: "router/router.go"
 		Filepath:     "router/router.go"
