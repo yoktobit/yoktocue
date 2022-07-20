@@ -5,11 +5,11 @@ import "github.com/hofstadter-io/hof/schema/gen"
 import "github.com/yoktobit/yoktocue/schema"
 
 #RouterGenerator: gen.#Generator & {
-	Outdir: "./router/"
+	Outdir: "./"
 	Routes: [...schema.#Route]
 	Out: [{
 		TemplatePath: "router/router.go"
-		Filepath:     "router.go"
+		Filepath:     "router/router.go"
 	},
 
 		for _, R in Routes {
@@ -20,7 +20,7 @@ import "github.com/yoktobit/yoktocue/schema"
 				}
 			}
 			TemplatePath: "router/route.go"
-			Filepath:     "\(R.Name).go"
+			Filepath:     "router/\(R.Name).go"
 		},
 
 	]
