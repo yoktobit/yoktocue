@@ -9,7 +9,7 @@ import "github.com/yoktobit/yoktocue/schema"
 	Routes: [...schema.#Route]
 	Out: [{
 		TemplatePath: "router/router.go"
-		Filepath:     "\(Outdir)/router.go"
+		Filepath:     "router.go"
 	},
 
 		for _, R in Routes {
@@ -20,7 +20,7 @@ import "github.com/yoktobit/yoktocue/schema"
 				}
 			}
 			TemplatePath: "router/route.go"
-			Filepath:     "\(Outdir)/\(R.Name).go"
+			Filepath:     "\(R.Name).go"
 		},
 
 	]
