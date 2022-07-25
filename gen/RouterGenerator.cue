@@ -7,8 +7,11 @@ import "strings"
 
 #RouterGenerator: gen.#Generator & {
 	Outdir: "./"
-	Routes: schema.#Routes
+	ParentRoutes=Routes: schema.#Routes
 	Out: [{
+		In: {
+			Routes: ParentRoutes
+		}
 		TemplatePath: "router/router.go"
 		Filepath:     "router/router.go"
 	},
@@ -26,5 +29,5 @@ import "strings"
 		},
 
 	]
-	PackageName: "github.com/yoktobit/yoktocue"
+	PackageName: string | *"github.com/yoktobit/yoktocue"
 }

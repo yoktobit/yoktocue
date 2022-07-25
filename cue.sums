@@ -4,6 +4,8 @@ github.com/hofstadter-io/hof v0.6.0 h1:Yrd/wpYmLJWAvP0wHhNRQO2pPSZEOfcFcdk/AeSLU
 github.com/hofstadter-io/hof v0.6.0/cue.mods h1:/StQ1pxKmfSQxRNCl954Bdw0AQS/5TUdRuqNUUhJkrw=
 github.com/hofstadter-io/hof v0.6.3 h1:aCyRfa/RZWUITYB66Ann7OsFSOe0fIBcxU2SqqB/O1o=
 github.com/hofstadter-io/hof v0.6.3/cue.mods h1:n296s8ofXjQRnSrX8161p0lW4ImA1W9DxjHLyAGLV+U=
+github.com/hofstadter-io/hof v0.6.4 h1:PDe/7L9/UT//QCjFtCZ+foS/kIDpsJ8NEKnYlB0KuDg=
+github.com/hofstadter-io/hof v0.6.4/cue.mods h1:n296s8ofXjQRnSrX8161p0lW4ImA1W9DxjHLyAGLV+U=
 github.com/hofstadter-io/hof/schema/dm v0.6.2 h1:8yQ+jyuLmIwRZlhCgdoiMuS1dqIFYbLmUxHnNpJrF4Y=
 github.com/hofstadter-io/hof/schema/dm v0.6.2/cue.mods h1:n296s8ofXjQRnSrX8161p0lW4ImA1W9DxjHLyAGLV+U=
 github.com/hofstadter-io/hofmod-cli v0.7.7 h1:2e12PmkkEs3C9EzU4VXE8afMxxsYiBvFAW3Qf9nL8jw=
