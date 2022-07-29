@@ -6,7 +6,6 @@ import "github.com/yoktobit/yoktocue/schema"
 import "strings"
 
 #RouterGenerator: gen.#Generator & {
-	Outdir: "./"
 	ParentRoutes=Routes: schema.#Routes
 	Out: [{
 		In: {

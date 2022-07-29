@@ -4,19 +4,19 @@ import (
 	"github.com/hofstadter-io/hof/schema/dm"
 )
 
-#DatamodelSchema: dm.#Datamodel & {
-    Models: #ModelsSchema
+#Datamodel: dm.#Datamodel & {
+    Models: #Models
 }
 
-#ModelsSchema: [name=string]: #ModelSchema & {Name: name, ...}
+#Models: [name=string]: #Model & {Name: name, ...}
 
-#ModelSchema: dm.#Model & {
+#Model: dm.#Model & {
 	
 }
 
-#FieldsSchema: [name=string]: #FieldSchema & {Name: name, ...}
+#Fields: [name=string]: #Field & {Name: name, ...}
 
-#FieldSchema: dm.#Field & {
+#Field: dm.#Field & {
 	Type: #Type
 	Label: string
 }
