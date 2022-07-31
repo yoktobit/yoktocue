@@ -21,10 +21,12 @@ class _FormStepContentState extends State<FormStepContent> {
         maxWidth: 700,
       ),
       child: Column(children: [
+        {{ range $F := .Step.Fields}}
         FormBuilderTextField(
-          name: 'Anrede',
-          decoration: const InputDecoration(labelText: 'Anrede'),
+          name: '{{$F.Name}}',
+          decoration: const InputDecoration(labelText: '{{$F.Label}}'),
         ),
+        {{end}}
       ]),
     );
   }

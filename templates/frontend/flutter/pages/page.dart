@@ -28,10 +28,12 @@ class _FormPageState extends State<FormPage> {
           onStepContinue: stepContinue,
           currentStep: _step,
           steps: const [
+            {{ range $S := .Page.Steps }}
             Step(
-              title: Text('Anmeldung'),
-              content: FormStepContent(title: "Anmeldung"),
+              title: Text('{{ $S.Name }}'),
+              content: FormStepContent(title: "{{ $S.Name }}"),
             ),
+            {{ end }}
           ],
         ),
       ),

@@ -28,7 +28,9 @@ AppFrontend: gen.#FrontendGenerator & {
 					Welcome: {
 						let M=Datamodel.Models.Hello.Fields
 						Fields: [
-							M.Vorname
+							M.Titel,
+							M.Vorname,
+							M.Nachname,
 						]
 					}
 				}
@@ -43,8 +45,16 @@ Datamodel: schema.#Datamodel & {
 	Models: {
 		Hello: {
 			Fields: {
+				Titel: {
+					Label: "Titel"
+					Type: "string"
+				}
 				Vorname: {
-					Label: "Vorname"
+					Label: "Vornamen"
+					Type: "string"
+				}
+				Nachname: {
+					Label: "Nachname"
 					Type: "string"
 				}
 			}

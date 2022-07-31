@@ -28,6 +28,7 @@ import "strings"
 		for _, S in P.Steps {
 			In: {
 				Step: S
+				Page: P
 			}
 			_lowerPage:   strings.ToLower(P.Name)
 			_lowerStep:   strings.ToLower(S.Name)
