@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/page_{{ lower .Frontend.FirstPage }}.dart';
+import 'pages/{{ lower .Frontend.FirstPage }}/page_{{ lower .Frontend.FirstPage }}.dart';
 
 void main() {
   runApp(const MyApp());
