@@ -18,6 +18,7 @@ import "strings"
 
 		for _, P in ParentFrontend.Pages {
 			In: {
+				Frontend: ParentFrontend
 				Page: P
 			}
 			_lowerName:   strings.ToLower(P.Name)
@@ -27,8 +28,9 @@ import "strings"
 		for _, P in ParentFrontend.Pages
 		for _, S in P.Steps {
 			In: {
-				Step: S
+				Frontend: ParentFrontend
 				Page: P
+				Step: S
 			}
 			_lowerPage:   strings.ToLower(P.Name)
 			_lowerStep:   strings.ToLower(S.Name)

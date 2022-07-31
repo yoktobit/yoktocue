@@ -22,6 +22,9 @@ AppFrontend: gen.#FrontendGenerator & {
 	Name: "Frontendgenerator"
 	Outdir: "./out"
 	Frontend: {
+		AppTitle: "MegaAnwendung"
+		ModuleName: "flutter_project"
+		FirstPage: "Page1"
 		Pages: {
 			Page1: {
 				Steps: {

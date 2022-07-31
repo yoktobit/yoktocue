@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/page.dart';
+import 'pages/page_{{ lower .Frontend.FirstPage }}.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '{{ .Frontend.AppTitle }}',
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const FormPage(title: 'Flutter Demo Home Page'),
+      home: const {{ .Frontend.FirstPage }}Page(),
     );
   }
 }

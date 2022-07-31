@@ -1,7 +1,13 @@
 package schema
 
+import "list"
+
 #Frontend: {
+	AppTitle: string
+	ModuleName: string
+	FirstPage: string
 	Pages: [name=string]: #Page & {Name: name, ...}
+	#CheckPages: true & list.MinItems([for label, _ in Pages if list.Contains([FirstPage], label) {label}], 1)
 }
 
 #Page: {

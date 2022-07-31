@@ -4,16 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 
-class FormStepContent extends StatefulWidget {
-  const FormStepContent({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+class {{.Step.Name}}StepContent extends StatefulWidget {
+  const {{.Step.Name}}StepContent({Key? key}) : super(key: key);
 
   @override
-  State<FormStepContent> createState() => _FormStepContentState();
+  State<{{.Step.Name}}StepContent> createState() => _{{.Step.Name}}StepContentState();
 }
 
-class _FormStepContentState extends State<FormStepContent> {
+class _{{.Step.Name}}StepContentState extends State<{{.Step.Name}}StepContent> {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
