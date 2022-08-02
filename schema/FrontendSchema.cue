@@ -3,11 +3,11 @@ package schema
 import "list"
 
 #Frontend: {
-	AppTitle: string
+	AppTitle:   string
 	ModuleName: string
-	FirstPage: string
+	FirstPage:  string
 	Pages: [name=string]: #Page & {Name: name, ...}
-	#CheckPages: true & list.MinItems([for label, _ in Pages if list.Contains([FirstPage], label) {label}], 1)
+	#CheckPages: true & list.MinItems([ for label, _ in Pages if list.Contains([FirstPage], label) {label}], 1)
 }
 
 #Page: {
@@ -23,7 +23,25 @@ import "list"
 #Step: {
 	Name:  string
 	Label: string | *Name
-	Labels: [string]:      string
-	Fields: [...#Field]//[name=string]: #Field & {Name: name}
+	Labels: [string]: string
+	Fields: #SupportedFrontendFields
 	...
+}
+
+#SupportedFrontendFields: [...#SupportedFrontendField]
+
+#SupportedFrontendField: #HtmlField | #Field
+
+HTML: "html"
+
+#FrontendTypes: #CommonTypes | HTML
+
+#FrontendField: #FieldCommon & {
+	Type: #FrontendTypes
+	...
+}
+
+#HtmlField: #FrontendField & {
+	Type: HTML
+	Content: string
 }

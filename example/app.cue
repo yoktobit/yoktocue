@@ -1,16 +1,17 @@
 package example
 
 import "github.com/yoktobit/yoktocue/gen"
+
 import "github.com/yoktobit/yoktocue/schema"
 
 AppRoutes: gen.#RouterGenerator & {
 	@gen(router)
-	Name: "Generator"
+	Name:   "Generator"
 	Outdir: "./out"
-	Debug: true
+	Debug:  true
 	Routes: {
 		"/echo": {
-			Name: "Echo"
+			Name:   "Echo"
 			Method: "get"
 		}
 	}
@@ -19,21 +20,22 @@ AppRoutes: gen.#RouterGenerator & {
 
 AppFrontend: gen.#FrontendGenerator & {
 	@gen(frontend)
-	Name: "Frontendgenerator"
+	Name:   "Frontendgenerator"
 	Outdir: "./out"
 	Frontend: {
-		AppTitle: "MegaAnwendung"
+		AppTitle:   "MegaAnwendung"
 		ModuleName: "flutter_project"
-		FirstPage: "Page1"
+		FirstPage:  "Page1"
 		Pages: {
 			Page1: {
 				Steps: {
 					Welcome: {
-						let M=Datamodel.Models.Hello.Fields
+						let M = Datamodel.Models.Hello.Fields
 						Fields: [
 							M.Titel,
 							M.Vorname,
 							M.Nachname,
+							StaticHtmlField,
 						]
 					}
 				}
@@ -50,18 +52,32 @@ Datamodel: schema.#Datamodel & {
 			Fields: {
 				Titel: {
 					Label: "Titel"
-					Type: "string"
+					Type:  "string"
 				}
 				Vorname: {
 					Label: "Vornamen"
-					Type: "string"
+					Type:  "string"
 				}
 				Nachname: {
 					Label: "Nachname"
-					Type: "string"
+					Type:  "string"
 				}
 			}
 			Relations: {}
 		}
 	}
 }
+
+StaticHtmlField: schema.#HtmlField & schema.#SupportedFrontendField & {
+	Name: "StaticHtmlField"
+	Label: "StaticHtmlField"
+	Content: """
+		<h1>
+		Überschrift
+		</h1>
+		<p>
+		Ein Absatz dies ist.
+		</p>
+		"""
+}
+

@@ -16,9 +16,15 @@ import (
 
 #Fields: [name=string]: #Field & {Name: name, ...}
 
-#Field: dm.#Field & {
-	Type: #Type
+#FieldCommon: dm.#Field & {
+	Type: string
 	Label: string
 }
 
-#Type: string & ("string" | "int" | "decimal" | "date" | "time")
+#Field: #FieldCommon & {
+	Type: #Type
+}
+
+#CommonTypes: ("string" | "int" | "decimal" | "date" | "time")
+
+#Type: string & #CommonTypes

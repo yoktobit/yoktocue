@@ -1,0 +1,4 @@
+{{ $Content := . }}
+Html(data: """
+{{ $Content }}
+"""),

@@ -20,10 +20,11 @@ class _{{.Step.Name}}StepContentState extends State<{{.Step.Name}}StepContent> {
       ),
       child: Column(children: [
         {{ range $F := .Step.Fields}}
-        FormBuilderTextField(
-          name: '{{$F.Name}}',
-          decoration: const InputDecoration(labelText: '{{$F.Label}}'),
-        ),
+          {{ if eq $F.Type "html" }}
+            {{ template "frontend/flutter/static_html_field.dart" $F.Content }}
+          {{ else }}
+            {{ template "frontend/flutter/form_builder_text_field.dart" $F }}
+          {{ end }}
         {{end}}
       ]),
     );
