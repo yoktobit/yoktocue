@@ -22,6 +22,8 @@ class _{{.Step.Name}}StepContentState extends State<{{.Step.Name}}StepContent> {
         {{ range $F := .Step.Fields}}
           {{ if eq $F.Type "html" }}
             {{ template "frontend/flutter/static_html_field.dart" $F.Content }}
+          {{ else if eq $F.Type "int"}}
+            {{ template "frontend/flutter/form_builder_int_field.dart" $F }}
           {{ else }}
             {{ template "frontend/flutter/form_builder_text_field.dart" $F }}
           {{ end }}
